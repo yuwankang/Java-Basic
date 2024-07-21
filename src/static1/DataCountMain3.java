@@ -10,6 +10,18 @@ public class DataCountMain3 {
 
         Data3 data3 = new Data3("C");
         System.out.println("C count=" + Data3.count);
+
+        //추가
+        //인스턴스를 통한 접근
+        Data3 data4 = new Data3("D");
+        //자바가 좋아하지 않는 코드
+        //카운트가 인스턴스 변수라고 착각할수 있다. 좋지 않은 코드
+        System.out.println(data4.count);
+
+        //클래스를 통한 접근
+        // 100프로 스태틱 변수라고 생각된다.
+        System.out.println(Data3.count);
+
         //코드를 보면 count 정적 변수에 접근하는 방법이 특이하다. Data3.count와 같이 클래스 명에
         // .dot을 사용한다. 마치 클래스에 직접 접근하는 것 처럼 느껴진다.
         //static이 붙은 멤버 변수는 메서드 영역에서 관리한다.
